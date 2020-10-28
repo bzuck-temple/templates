@@ -47,16 +47,17 @@ registerS3method("knit_print", "data.frame", print.me)
 #textfromgittoR <- paste(readLines("https://github.com/reilly-lab/TempleTextMine2020/raw/master/unabomber_manifesto.txt"), collapse = " ")  #from github
 ```
 
-## Step One
+# Step One
 your words here
 ```{r data, include=T}
-
 x <-rnorm(10)
 ```
 
-## Step Two
+## Step One Part Two
 your words here
-```{r data, include=T}
+```{r table, include=T}
 
 iris
 ```
+
+
