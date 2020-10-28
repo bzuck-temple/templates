@@ -7,7 +7,7 @@ output:
     toc: true
     toc_float: true
     toc_depth: 1
-    css: !expr here::here("../StylesTemplates/jr_13.css")
+    css: !expr here::here("jr_13.css")
 ---
 
 ```{r setup, include=F}
