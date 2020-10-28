@@ -1,3 +1,4 @@
+#' @export
 JamiesStyle <- function(toc = TRUE) {
 
   css <- system.file("rmarkdown/templates/report/resource/report.css", package = "basictemplate")
