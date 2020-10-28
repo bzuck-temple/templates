@@ -1,3 +1,4 @@
+#' @export
 ---
 title: "My Project"
 author: "Bonnie Zuckerman"
