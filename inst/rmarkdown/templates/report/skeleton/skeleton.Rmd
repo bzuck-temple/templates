@@ -1,6 +1,6 @@
 ---
-title: "My Project"
-author: "Bonnie Zuckerman"
+title: "Your Project Name Here"
+author: "your Name here"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output: basictemplate::JamiesStyle
 ---
@@ -47,3 +47,16 @@ registerS3method("knit_print", "data.frame", print.me)
 #textfromgittoR <- paste(readLines("https://github.com/reilly-lab/TempleTextMine2020/raw/master/unabomber_manifesto.txt"), collapse = " ")  #from github
 ```
 
+## Step One
+your words here
+```{r data, include=T}
+
+x <-rnorm(10)
+```
+
+## Step Two
+your words here
+```{r data, include=T}
+
+iris
+```
