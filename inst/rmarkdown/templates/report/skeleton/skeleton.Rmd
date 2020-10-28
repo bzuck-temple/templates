@@ -1,9 +1,8 @@
-#' @export
 ---
 title: "My Project"
 author: "Bonnie Zuckerman"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
-output: bzuck-temple::report
+output: basictemplate::JamiesStyle
 ---
 
 ```{r setup, include=F}
