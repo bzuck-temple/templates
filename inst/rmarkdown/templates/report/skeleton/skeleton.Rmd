@@ -48,13 +48,13 @@ registerS3method("knit_print", "data.frame", print.me)
 ```
 
 # Step One
-your words here
+Your words here
 ```{r data, include=T}
 x <-rnorm(10)
 ```
 
 ## Step One Part Two
-your words here
+Your words here
 ```{r table, include=T}
 
 iris
