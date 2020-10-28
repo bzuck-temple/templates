@@ -1,0 +1,54 @@
+---
+title: "My Project"
+author: "Bonnie Zuckerman"
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 1
+    css: !expr here::here("../StylesTemplates/jr_13.css")
+---
+
+```{r setup, include=F}
+knitr::opts_chunk$set(fig.width=6, fig.height=4, fig.align = 'center', fig.path='Figs/', cache.path='Cache/', eval=T, echo=T, tidy=TRUE,  cache=F, message=F, warning=F, stringsAsFactors=F, yaml.eval.expr = TRUE)  
+library(tidyverse) 
+library(readr) #read raw files from github
+library(here) #directory and path specification ex: here("dat", "mydat.txt')
+library(tm)  
+library(stringi) #string splitting and wrapping
+library(textreadr)
+library(textclean)
+library(quanteda)
+library(readtext) #read text files for corpus conversion
+library(kableExtra) #data table printing
+library(knitr)
+library(udpipe)
+jamie.theme <- theme_bw() + theme(axis.line = element_line(colour = "black"), panel.grid.minor = element_blank(), panel.grid.major = element_blank(), panel.border = element_blank(), panel.background = element_blank(), legend.title= element_blank())  #custom theme ggplot2
+
+
+print.me <- function(x, ...) {
+if (nrow(x) > 200){
+   len <- 200 
+    } else {
+       len <- (nrow(x))
+}
+   x[1:len,] %>%
+   kbl(digits=2, align= 'l', booktabs=T) %>%
+   kable_styling(fixed_thead = T) %>%
+   kable_paper("striped", full_width = T, html_font = "Helvetica", font_size = 11) %>%
+   row_spec(0, color = "yellow", background = "#5b705f", font_size = 12) %>%
+   scroll_box(width = "700px", height = "300px") %>%
+   asis_output()
+}
+
+registerS3method("knit_print", "data.frame", print.me)
+#read csv data file from github
+#step1 <- "https://github.com/Reilly-ConceptsCognitionLab/sandbox_scrapfiles/raw/main/fakedat.csv"
+#step2 <- read.csv(step1, header=T)
+#read string data using 'here' from a local directory
+#to_R <- readLines(here("data", "MyRaw.txt")) ---- using 'here' to read in data
+#to_format <- paste(to_R, collapse=" ")
+#textfromgittoR <- paste(readLines("https://github.com/reilly-lab/TempleTextMine2020/raw/master/unabomber_manifesto.txt"), collapse = " ")  #from github
+```
+
