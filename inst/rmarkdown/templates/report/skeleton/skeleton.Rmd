@@ -1,6 +1,6 @@
 ---
 title: "Your Project Name Here"
-author: "your Name here"
+author: "Your Name Here"
 date: "`r format(Sys.Date(), '%B %d, %Y')`"
 output: basictemplate::JamiesStyle
 ---
